@@ -88,6 +88,7 @@ describe("book.js", function () {
     it("should add 20 pages per letter in the title", function () {
       var bookTitle = createTitle("Teenage Ghoul");
       var bookPageCount = calculatePageCount(bookTitle);
+
       assert.equal(bookPageCount, 340);
     });
 

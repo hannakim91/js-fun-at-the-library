@@ -1,7 +1,7 @@
 // interpolate with 'the' in front
 
 function createTitle(bookIdea) {
-  //var bookIdea = `The ${bookIdea}`;
+  var bookIdea = `The ${bookIdea}`;
   return bookIdea;
   //return `The ${bookIdea}`;
 };
