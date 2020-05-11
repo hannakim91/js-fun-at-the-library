@@ -5,7 +5,6 @@ module.exports = {
   searchShelf: searchShelf
 };
 
-//why doesn't push work but unshift does?
 function shelfBook(book, shelf) {
   if (shelf.length < 3) {
     return shelf.unshift(book);
@@ -30,28 +29,24 @@ function listTitles(shelf) {
 };
 
 function searchShelf(shelf, book) {
-  var nameOfBook = "";
   for (var i = 0; i < shelf.length; i++) {
-    var nameOfBook = shelf[i].title
-    if (nameOfBook === book) {
-      console.log(nameOfBook, book);
+    if (shelf[i].title === book) {
+      console.log(book);
       console.log(true);
       return true;
+    }
     // } else if (shelf[i].title !== book ) {
     //   console.log(shelf[i].title)
     //   console.log(false);
     //   return false;
     // }
-  } else {
-      console.log(nameOfBook, book);
-      console.log(false);
-      return false; }
+    // return statement breaks loop when you do the first iteration that meets the condition
   }
+  return false;
 };
-
 // function searchShelf(shelf, book) {
 //   console.log(shelf[0].title, shelf[1].title, book);
-//   if (shelf[1].title === book) {
+//   if (shelf[i].title === book) {
 //     console.log(true);
 //     return true;
 //   } else {
